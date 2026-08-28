@@ -79,3 +79,36 @@ Another unspalsh shortcode:
   name="xxx" 
   href="xxx" 
 %}}
+
+A third unspalsh shortcode, with no trailing whitespace:
+
+{{% unsplash
+  name="xxx"
+  href="xxx"
+%}}
+
+A shortcode with a hyphenated name:
+
+{{< styled-img src="mastering-the-helix-editor-udemy-course/david.webp" alt="david" class="w-1/6 pr-4 h-auto float-left" >}}
+
+Shortcodes can also be hyphenated {{< styled-img src="a/david.webp" alt="david" >}} inside a paragraph.
+
+A shortcode with no arguments:
+
+{{< toc >}}
+
+A Markdown shortcode with no arguments:
+
+{{% toc %}}
+
+A shortcode in a nested directory:
+
+{{< gallery/image title="Steve Francia" >}}
+
+{{< youtube id="w7Ft2ymGmfc" >}} followed by trailing text on the same line.
+
+A standalone closing shortcode:
+
+{{< /tabs >}}
+
+Prose between two shortcodes {{< first >}} on the same {{< second >}} line is still checked.
