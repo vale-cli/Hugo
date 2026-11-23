@@ -1,0 +1,7 @@
+extends: existence
+message: "'%s' is inside a shortcode, which should be ignored."
+level: error
+tokens:
+  - zorbleflux
+  - zorbapi
+  - zorbnotice

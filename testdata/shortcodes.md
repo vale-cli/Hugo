@@ -112,3 +112,11 @@ A standalone closing shortcode:
 {{< /tabs >}}
 
 Prose between two shortcodes {{< first >}} on the same {{< second >}} line is still checked.
+
+Shortcodes written without spaces inside the delimiters:
+
+The {{<glossary_tooltip text="zorbleflux" term_id="zorbleflux">}} runs on each node.
+
+{{%zorbnotice%}}Some notice text.{{%/zorbnotice%}}
+
+A link to [the API]({{<relref "zorbapi.md">}}) works too.

@@ -7,6 +7,7 @@ zip:
 
 sync:
 	cd testdata && vale sync && cd -
+	cd testdata/leaks && vale sync && cd -
 
 test: zip sync
 	go test -v ./...
