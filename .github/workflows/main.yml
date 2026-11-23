@@ -33,14 +33,15 @@ jobs:
 
       - name: Install Deps
         run: |
-          wget https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz
+          wget https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz
           mkdir bin && tar -xvzf vale_${VALE_VERSION}_Linux_64-bit.tar.gz -C bin
           echo "./bin" >> $GITHUB_PATH
         env:
-          VALE_VERSION: 3.3.0
+          VALE_VERSION: 3.28.1
 
       - name: Features
         run: |
           zip -r Hugo.zip Hugo -x "*.DS_Store"
           cd testdata && ../bin/vale sync && cd -
+          cd testdata/leaks && ../../bin/vale sync && cd -
           go test -v ./...
